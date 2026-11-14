@@ -1,0 +1,1 @@
+import {test} from 'node:test';import {strict as assert} from 'node:assert';import {readFileSync} from 'node:fs';test('CRUD routes',()=>{const s=readFileSync('src/server.ts','utf8');for(const m of ['get','post','patch','delete'])assert.match(s,new RegExp('app\\.'+m+'\\('))});
